@@ -30,7 +30,7 @@ final class iOSDC2023_StoreKitTestDEMOTests: XCTestCase {
         let product = try XCTUnwrap(products.first)
 
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .free)
-        try await dependency.testTarget.dispatch(action: .purchase(product: product))
+        await dependency.testTarget.dispatch(action: .purchase(product: product))
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .membership)
     }
 
@@ -43,7 +43,7 @@ final class iOSDC2023_StoreKitTestDEMOTests: XCTestCase {
         let product = try XCTUnwrap(products.first)
 
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .free)
-        try await dependency.testTarget.dispatch(action: .purchase(product: product))
+        await dependency.testTarget.dispatch(action: .purchase(product: product))
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .free)
         XCTAssertEqual(dependency.testTarget.isShowAlert, true)
     }
@@ -52,14 +52,14 @@ final class iOSDC2023_StoreKitTestDEMOTests: XCTestCase {
     func testRestore() async throws {
         try dependency.session.buyProduct(productIdentifier: Const.productID)
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .free)
-        try await dependency.testTarget.dispatch(action: .getMe)
+        await dependency.testTarget.dispatch(action: .getMe)
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .membership)
     }
 
     // transaction.updatesの監視
     func testTransactionListener() async throws {
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .free)
-        try await dependency.testTarget.dispatch(action: .startTransactionListener)
+        await dependency.testTarget.dispatch(action: .startTransactionListener)
         try dependency.session.buyProduct(productIdentifier: Const.productID)
         try await Task.sleep(nanoseconds: 6 * 1_000_000_000)
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .membership)
@@ -73,7 +73,7 @@ final class iOSDC2023_StoreKitTestDEMOTests: XCTestCase {
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .free)
         try dependency.session.buyProduct(productIdentifier: Const.productID)
         try dependency.session.forceRenewalOfSubscription(productIdentifier: Const.productID)
-        try await dependency.testTarget.dispatch(action: .getMe)
+        await dependency.testTarget.dispatch(action: .getMe)
         XCTAssertEqual(dependency.testTarget.me.subscriptionStatus, .membership)
         XCTAssertEqual(dependency.testTarget.me.subscriptionInformation?.renewalState, .inGracePeriod)
 
