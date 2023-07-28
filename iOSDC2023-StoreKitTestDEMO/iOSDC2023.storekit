@@ -10,6 +10,8 @@
     "_compatibilityTimeRate" : {
       "3" : 6
     },
+    "_failTransactionsEnabled" : false,
+    "_storeKitError" : 0,
     "_timeRate" : 1004
   },
   "subscriptionGroups" : [
