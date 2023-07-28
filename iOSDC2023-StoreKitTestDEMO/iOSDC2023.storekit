@@ -1,0 +1,130 @@
+{
+  "identifier" : "D08298DD",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_compatibilityTimeRate" : {
+      "3" : 6
+    },
+    "_timeRate" : 1004
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "373B1F0D",
+      "localizations" : [
+
+      ],
+      "name" : "iOSDC2023",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "100",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "D0F927AA",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "iosdc2023.1month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "iosdc2023.1month",
+          "subscriptionGroupID" : "373B1F0D",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "300",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "81600EAB",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "iosdc2023.3month",
+          "recurringSubscriptionPeriod" : "P3M",
+          "referenceName" : "iosdc2023.3month",
+          "subscriptionGroupID" : "373B1F0D",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "200",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "A3427A77",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "iosdc2023.premium.1month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "iosdc2023.premium.1month",
+          "subscriptionGroupID" : "373B1F0D",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "600",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "178DFE8E",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "iosdc2023.premium.3month",
+          "recurringSubscriptionPeriod" : "P3M",
+          "referenceName" : "iosdc2023.premium.3month",
+          "subscriptionGroupID" : "373B1F0D",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}
